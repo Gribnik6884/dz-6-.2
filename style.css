@@ -9,6 +9,7 @@
             align-items: center;
             height: 100vh;
             color: #333;
+            flex-direction: column;
         }
 
         h1 {
