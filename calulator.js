@@ -28,13 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
 function calculatePrice() {
     const quantity = parseInt(document.getElementById("quantity").value, 10);
     const serviceType = document.querySelector('input[name="serviceType"]:checked').value;
-    let basePrice = 1000;
+    let basePrice = 100;
 
     if (serviceType === "type2") {
-        basePrice += 500;
+        basePrice += 400;
     } else if (serviceType === "type3") {
         if (document.getElementById("property").checked) {
-            basePrice += 300; 
+            basePrice += 200; 
         }
     }
 

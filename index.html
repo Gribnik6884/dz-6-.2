@@ -17,7 +17,7 @@
         <input type="radio" id="type1" name="mealType" value="type1" checked>
         <label for="type1">Борщ</label><br>
         <input type="radio" id="type2" name="mealType" value="type2">
-        <label for="type2">Карбонара </label><br>
+        <label for="type2">Кофе </label><br>
         <input type="radio" id="type3" name="mealType" value="type3">
         <label for="type3">Цезарь</label><br><br>
 
@@ -25,13 +25,13 @@
             <label for="options">Дополнительный наполнитель</label>
             <select id="options" name="options">
                 <option value="option1">Хлеб</option>
-                <option value="option2">Соус</option>
+                <option value="option2">Сметана</option>
             </select><br><br>
         </div>
 
         <div id="propertyDiv" class="hidden">
             <input type="checkbox" id="property" name="property">
-            <label for="property">Больше бекона</label><br><br>
+            <label for="property">Сахар, сироп, Безлактозное молоко</label><br><br>
         </div>
 
         <button type="button" onclick="calculatePrice()">Рассчитать стоимость</button>
@@ -70,10 +70,10 @@
         function calculatePrice() {
             const quantity = parseInt(document.getElementById("quantity").value, 10);
             const mealType = document.querySelector('input[name="mealType"]:checked').value;
-            let basePrice = 500; 
+            let basePrice = 100; 
 
             if (mealType === "type1") {
-                basePrice += 800; 
+                basePrice += 400; 
             } else if (mealType === "type2") {
                 if (document.getElementById("property").checked) {
                     basePrice += 200; 
